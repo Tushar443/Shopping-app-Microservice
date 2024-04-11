@@ -1,6 +1,7 @@
-package com.microservice.project.orderservice.repo;
+package com.project.microservices.OrderService.repo;
 
-import com.microservice.project.orderservice.model.Order;
+
+import com.project.microservices.OrderService.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

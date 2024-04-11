@@ -1,7 +1,6 @@
-package com.microservice.project.orderservice.controller;
-
-import com.microservice.project.orderservice.dto.OrderReq;
-import com.microservice.project.orderservice.service.OrderService;
+package com.project.microservices.OrderService.controller;
+import com.project.microservices.OrderService.dto.OrderReq;
+import com.project.microservices.OrderService.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

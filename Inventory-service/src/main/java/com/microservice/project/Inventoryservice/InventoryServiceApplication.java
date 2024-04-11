@@ -5,9 +5,11 @@ import com.microservice.project.Inventoryservice.model.Inventory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableEurekaServer
 public class InventoryServiceApplication {
 
 	public static void main(String[] args) {
@@ -18,11 +20,11 @@ public class InventoryServiceApplication {
 	public CommandLineRunner loadData(InventoryRepo inventoryRepo){
 		return args -> {
 			Inventory inventory = new Inventory();
-			inventory.setSkuCode("Iphone_13");
+			inventory.setSkuCode("iphone_13");
 			inventory.setQuantity(100);
 
 			Inventory inventory2 = new Inventory();
-			inventory2.setSkuCode("Iphone_13_red");
+			inventory2.setSkuCode("iphone_13_red");
 			inventory2.setQuantity(0);
 
 			inventoryRepo.save(inventory);

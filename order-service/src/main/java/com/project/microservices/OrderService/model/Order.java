@@ -1,7 +1,7 @@
-package com.microservice.project.orderservice.model;
+package com.project.microservices.OrderService.model;
 
 import jakarta.persistence.*;
-
+import com.project.microservices.OrderService.model.*;
 import java.util.List;
 
 @Entity

@@ -1,4 +1,4 @@
-package com.microservice.project.productservice.beans;
+package com.project.microservices.ProductService.beans;
 
 import jakarta.persistence.*;
 

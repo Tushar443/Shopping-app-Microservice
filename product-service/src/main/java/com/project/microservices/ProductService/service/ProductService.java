@@ -1,9 +1,9 @@
-package com.microservice.project.productservice.service;
+package com.project.microservices.ProductService.service;
 
-import com.microservice.project.productservice.beans.Product;
-import com.microservice.project.productservice.dto.ProductRequest;
-import com.microservice.project.productservice.dto.ProductResponse;
-import com.microservice.project.productservice.repository.ProductRepo;
+import com.project.microservices.ProductService.beans.Product;
+import com.project.microservices.ProductService.dto.ProductRequest;
+import com.project.microservices.ProductService.dto.ProductResponse;
+import com.project.microservices.ProductService.repository.ProductRepo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -30,7 +30,7 @@ public class OrderService {
         order.setOrderLineItemsList(orderLineItemsList);
         order.setOrderNumber(UUID.randomUUID().toString());
         //call inventory service and place and order if product is in stock.
-        boolean result = orderServiceProxy.retriveProductStock("Iphone_13");
+        boolean result = orderServiceProxy.retriveProductStock(orderReq.getOrderLineItemsList().get(0).getSkuCode());
         System.out.println("Order service Proxy result : = "+ result);
         if(result){
             orderRepo.save(order);

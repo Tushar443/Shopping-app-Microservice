@@ -1,4 +1,5 @@
 package com.project.microservices.OrderService.service;
+import com.project.microservices.OrderService.dto.InventoryResponse;
 import com.project.microservices.OrderService.dto.OrderLineItemsDto;
 import com.project.microservices.OrderService.dto.OrderReq;
 import com.project.microservices.OrderService.model.Order;
@@ -30,9 +31,12 @@ public class OrderService {
         order.setOrderLineItemsList(orderLineItemsList);
         order.setOrderNumber(UUID.randomUUID().toString());
         //call inventory service and place and order if product is in stock.
-        boolean result = orderServiceProxy.retriveProductStock(orderReq.getOrderLineItemsList().get(0).getSkuCode());
-        System.out.println("Order service Proxy result : = "+ result);
-        if(result){
+        List<String> skuCodes = orderReq.getOrderLineItemsList().stream().map(orderLineItemsDto -> orderLineItemsDto.getSkuCode()).toList();
+
+        List<InventoryResponse> inventoryResponseList = orderServiceProxy.isInStock(skuCodes);
+        System.out.println("Order service Proxy result : = "+ inventoryResponseList);
+        boolean results = inventoryResponseList.stream().allMatch(inventoryResponse -> inventoryResponse.isInStock());
+        if(results){
             orderRepo.save(order);
         }else{
             throw new IllegalArgumentException("Product is not in stock ,please try again later");

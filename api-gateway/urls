@@ -1,0 +1,20 @@
+1) Product Service
+Before API Gateway:-
+POST :- http://localhost:8080/api/product
+GET  :- http://localhost:8080/api/product
+
+After API Gateway:-
+POST :- http://localhost:8888/api/product
+GET  :- http://localhost:8888/api/product
+
+2) Order Service
+Before API Gateway:-
+POST :- http://localhost:8080/api/order
+After API Gateway:-
+POST :- http://localhost:8888/api/order
+
+3) Inventory Service
+Before API Gateway:-
+GET :- http://localhost:8080/api/inventory
+After API Gateway:-
+GET :- http://localhost:8888/api/inventory

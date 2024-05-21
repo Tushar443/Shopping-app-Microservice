@@ -12,6 +12,11 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
+    @GetMapping
+    public  String getOrder(){
+        return "current order";
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String placeOrder(@RequestBody OrderReq orderReq){

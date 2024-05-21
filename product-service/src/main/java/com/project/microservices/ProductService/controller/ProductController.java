@@ -1,7 +1,7 @@
 package com.project.microservices.ProductService.controller;
 
-import com.project.microservices.ProductService.dto.ProductRequest;
-import com.project.microservices.ProductService.dto.ProductResponse;
+import com.project.microservices.ProductService.repository.dto.ProductRequest;
+import com.project.microservices.ProductService.repository.dto.ProductResponse;
 import com.project.microservices.ProductService.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
